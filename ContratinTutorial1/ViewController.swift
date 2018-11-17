@@ -9,9 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var titie:UILabel!
+    @IBOutlet weak var name: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        titie.text = "Name"
+        name.text = "Do any additional setup after loading the view"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +24,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func showTutorial(_ sender: UIBarButtonItem) {
+        
+        self.performSegue(withIdentifier: "showWeb", sender: self)
+    }
+    
 }
 
